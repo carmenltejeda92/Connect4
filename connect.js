@@ -66,17 +66,36 @@ for(let i=0; i<42; i++){
 }
 
 //Player one Color button
-const poButton = document.querySelector('#poColor')
+const poRed = document.querySelector('#poRed')
+const poYellow = document.querySelector('#poYellow')
 section.innerHTML = "Player 1"
-section.appendChild(poButton)
+section.appendChild(poRed)
+section.appendChild(poYellow)
 
 //Player two color button
-const ptButton = document.querySelector('#ptColor')
+const ptRed = document.querySelector('#ptRed')
+const ptYellow = document.querySelector('#ptYellow')
 aside.innerHTML = "Player 2"
-aside.appendChild(ptButton)
+aside.appendChild(ptRed)
+aside.appendChild(ptYellow)
+
+
+const chip = document.createElement('div')
+
+// Event Listeners
+if(document.getElementById('poRed').clicked == true){
+    chip.style.backgroundColor = 'Red'
+}else if(document.getElementById('poYellow').clicked == true){
+    chip.style.backgroundColor = 'Yellow'
+}
 
 
 
+main.addEventListener('click', () =>{
+    if(e.target.className === 'boxes'){
+        e.target.style.backgroundColor = chip.style.backgroundColor
+    }
+})
 
 
 
