@@ -26,11 +26,25 @@ section.style.border = '1px solid black'
 section.style.textAlign = 'center'
 
 
+main.style.height = '500px'
+main.style.width = '700px'
+main.style.backgroundColor = 'white'
+main.style.border = '1px solid black'
+main.style.textAlign = 'center'
+
+
 aside.style.height = '300px'
 aside.style.width = '150px'
 aside.style.backgroundColor = 'white'
 aside.style.border = '1px solid black'
 aside.style.textAlign = 'center'
+
+
+footer.style.height = '50px'
+footer.style.width = '400px'
+footer.style.backgroundColor = 'white'
+footer.style.border = '1px solid black'
+footer.style.textAlign = 'center'
 
 
 
