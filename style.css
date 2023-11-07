@@ -2,3 +2,26 @@ body{
     background-color:azure;
 }
 
+
+.middle{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#playerOne{
+    flex-direction: column;
+}
+
+#playerTwo{
+    align-self: center;
+}
+
+
+.bottomButtons{
+    justify-content: center;
+    align-self: center;
+}
+
+
+
