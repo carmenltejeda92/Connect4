@@ -8,7 +8,7 @@ const section = document.querySelector('#playerOne')
 const main = document.querySelector('#gameBoard')
 const aside = document.querySelector('#playerTwo')
 const footer = document.querySelector('.bottomButtons')
-
+const endGame = document.querySelector('#endGame')
 
 
 header.style.height = '50px'
@@ -83,20 +83,14 @@ aside.appendChild(ptYellow)
 const chip = document.createElement('div')
 
 // Event Listeners
-if(document.getElementById('poRed').clicked == true){
+poRed.addEventListener('click', () =>{
     chip.style.backgroundColor = 'Red'
-}else if(document.getElementById('poYellow').clicked == true){
-    chip.style.backgroundColor = 'Yellow'
-}
-
-
-
-main.addEventListener('click', () =>{
-    if(e.target.className === 'boxes'){
-        e.target.style.backgroundColor = chip.style.backgroundColor
-    }
 })
 
+
+endGame.addEventListener('click', () =>{
+    main.style.backgroundColor = 'white'
+})
 
 
 
