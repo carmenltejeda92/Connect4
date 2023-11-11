@@ -9,7 +9,9 @@ const main = document.querySelector('#gameBoard')
 const aside = document.querySelector('#playerTwo')
 const footer = document.querySelector('.bottomButtons')
 const endGame = document.querySelector('#endGame')
-const input = document.createElement('input')
+const input1 = document.createElement('input')
+const input2 = document.createElement('input')
+
 
 
 header.style.height = '50px'
@@ -28,8 +30,8 @@ section.style.border = '1px solid black'
 section.style.margin = '35px'
 section.style.textAlign = 'center'
 section.innerHTML = "Player 1"
-input.style.width = "75px"
-section.appendChild(input)
+input1.style.width = "75px"
+section.appendChild(input1)
 
 
 main.style.height = '500px'
@@ -50,6 +52,8 @@ aside.style.border = '1px solid black'
 aside.style.margin = '35px'
 aside.style.textAlign = 'center'
 aside.innerHTML = "Player 2"
+input2.style.width = '75px'
+aside.appendChild(input2)
 
 
 footer.style.height = '50px'
