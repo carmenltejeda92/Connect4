@@ -30,7 +30,7 @@ section.style.textAlign = 'center'
 
 main.style.height = '500px'
 main.style.width = '698px'
-main.style.backgroundColor = 'white'
+main.style.backgroundColor = 'blue'
 main.style.border = '3px solid black'
 main.style.margin ='35px'
 main.style.textAlign = 'center'
@@ -54,54 +54,63 @@ footer.style.border = '1px solid black'
 footer.style.margin = '35px'
 footer.style.textAlign = 'center'
 
+// //Player one Color button
+// const poRed = document.querySelector('#poRed')
+// const poYellow = document.querySelector('#poYellow')
+// section.innerHTML = "Player 1"
+// section.appendChild(poRed)
+// section.appendChild(poYellow)
 
-//loop to create game board
-for(let i=0; i<42; i++){
-    const boxes = document.createElement('div')
-    boxes.style.width = '98px'
-    boxes.style.height = '82px'
-    boxes.style.border = '1px solid black'
-    boxes.className = 'boxes'
-    main.appendChild(boxes)
-}
-
-//Player one Color button
-const poRed = document.querySelector('#poRed')
-const poYellow = document.querySelector('#poYellow')
-section.innerHTML = "Player 1"
-section.appendChild(poRed)
-section.appendChild(poYellow)
-
-//Player two color button
-const ptRed = document.querySelector('#ptRed')
-const ptYellow = document.querySelector('#ptYellow')
-aside.innerHTML = "Player 2"
-aside.appendChild(ptRed)
-aside.appendChild(ptYellow)
+// //Player two color button
+// const ptRed = document.querySelector('#ptRed')
+// const ptYellow = document.querySelector('#ptYellow')
+// aside.innerHTML = "Player 2"
+// aside.appendChild(ptRed)
+// aside.appendChild(ptYellow)
 
 
-const chip = document.createElement('div')
+// const chip = document.createElement('div')
 
-// Event Listeners
-poRed.addEventListener('click', () =>{
-    chip.style.backgroundColor = 'Red'
-})
+// // Event Listeners
+// poRed.addEventListener('click', () =>{
+//     chip.style.backgroundColor = 'Red'
+// })
 
 
 
-main.addEventListener('click', (e) =>{
-    if(e.target.className === 'boxes'){
-        e.target.style.backgroundColor = chip.style.backgroundColor
+// main.addEventListener('click', (e) =>{
+//     if(e.target.className === 'boxes'){
+//         e.target.style.backgroundColor = chip.style.backgroundColor
+//     }
+// })
+
+// endGame.addEventListener('click', () =>{
+//     location.reload()
+// })
+let columns = 7
+let rows = 6
+
+window.onload = function() {
+    gameBoard = []
+
+    for(let i=0; i<rows; i++){
+        let rowArr = []
+        for(let t=0; t<columns; t++){
+            rowArr.push(' ')
+
+            const boxes = document.createElement('div')
+            boxes.id = i.toString() + "-" + t.toString()
+            boxes.classList.add("boxes")
+            boxes.style.width = '98px'
+            boxes.style.height = '82px'
+            boxes.style.border = '1px solid black'
+            boxes.className = 'boxes'
+            main.appendChild(boxes)
+        }
     }
-})
-
-endGame.addEventListener('click', () =>{
-    location.reload()
-})
-
-
-
-
+}
+/* citation: "How to Build Connect 4 with Javascript HTML CSS" YouTube, uploaded by Kenny Yip Coding, 06, Feb, 2022,
+               https://www.youtube.com/watch?v=4ARsthVnCTg. */
 
 
 
