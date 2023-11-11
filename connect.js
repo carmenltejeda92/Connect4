@@ -11,6 +11,10 @@ const footer = document.querySelector('.bottomButtons')
 const endGame = document.querySelector('#endGame')
 const input1 = document.createElement('input')
 const input2 = document.createElement('input')
+const br = document.createElement('br')
+const br2 = document.createElement('br')
+const submit = document.createElement('button')
+const submit2 = document.createElement('button')
 
 
 
@@ -31,8 +35,10 @@ section.style.margin = '35px'
 section.style.textAlign = 'center'
 section.innerHTML = "Player 1"
 input1.style.width = "75px"
+section.append(br)
 section.appendChild(input1)
-
+submit.innerText = 'Submit'
+section.appendChild(submit)
 
 main.style.height = '500px'
 main.style.width = '698px'
@@ -53,7 +59,10 @@ aside.style.margin = '35px'
 aside.style.textAlign = 'center'
 aside.innerHTML = "Player 2"
 input2.style.width = '75px'
+aside.append(br2)
 aside.appendChild(input2)
+submit2.innerText = 'Submit'
+aside.appendChild(submit2)
 
 
 footer.style.height = '50px'
@@ -89,9 +98,10 @@ yellowChip.style.width = '75px'
 //     }
 // })
 
-// endGame.addEventListener('click', () =>{
-//     location.reload()
-// })
+endGame.addEventListener('click', () =>{
+    location.reload()
+})
+
 let columns = 7
 let rows = 6
 
