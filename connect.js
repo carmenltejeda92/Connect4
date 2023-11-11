@@ -20,12 +20,13 @@ header.style.textAlign = 'center'
 header.style.alignContent = 'center'
 
 
-section.style.height = '300px'
+section.style.height = '150px'
 section.style.width = '150px'
 section.style.backgroundColor = 'white'
 section.style.border = '1px solid black'
 section.style.margin = '35px'
 section.style.textAlign = 'center'
+section.innerHTML = "Player 1"
 
 
 main.style.height = '500px'
@@ -39,12 +40,13 @@ main.style.display = 'flex'
 
 
 
-aside.style.height = '300px'
+aside.style.height = '150px'
 aside.style.width = '150px'
 aside.style.backgroundColor = 'white'
 aside.style.border = '1px solid black'
 aside.style.margin = '35px'
 aside.style.textAlign = 'center'
+aside.innerHTML = "Player 2"
 
 
 footer.style.height = '50px'
@@ -54,22 +56,18 @@ footer.style.border = '1px solid black'
 footer.style.margin = '35px'
 footer.style.textAlign = 'center'
 
-// //Player one Color button
-// const poRed = document.querySelector('#poRed')
-// const poYellow = document.querySelector('#poYellow')
-// section.innerHTML = "Player 1"
-// section.appendChild(poRed)
-// section.appendChild(poYellow)
 
-// //Player two color button
-// const ptRed = document.querySelector('#ptRed')
-// const ptYellow = document.querySelector('#ptYellow')
-// aside.innerHTML = "Player 2"
-// aside.appendChild(ptRed)
-// aside.appendChild(ptYellow)
+const redChip = document.createElement('div')
+redChip.style.backgroundColor = 'red'
+redChip.style.borderRadius = '50%'
+redChip.style.height = '75px'
+redChip.style.width = '75px'
 
-
-// const chip = document.createElement('div')
+const yellowChip = document.createElement('div')
+yellowChip.style.backgroundColor = 'Yellow'
+yellowChip.style.borderRadius = '50%'
+yellowChip.style.height = '75px'
+yellowChip.style.width = '75px'
 
 // // Event Listeners
 // poRed.addEventListener('click', () =>{
@@ -107,6 +105,7 @@ window.onload = function() {
             boxes.className = 'boxes'
             main.appendChild(boxes)
         }
+        gameBoard.push(rowArr)
     }
 }
 /* citation: "How to Build Connect 4 with Javascript HTML CSS" YouTube, uploaded by Kenny Yip Coding, 06, Feb, 2022,
