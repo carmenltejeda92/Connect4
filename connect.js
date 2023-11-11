@@ -88,8 +88,15 @@ poRed.addEventListener('click', () =>{
 })
 
 
+
+main.addEventListener('click', (e) =>{
+    if(e.target.className === 'boxes'){
+        e.target.style.backgroundColor = chip.style.backgroundColor
+    }
+})
+
 endGame.addEventListener('click', () =>{
-    main.style.backgroundColor = 'white'
+    location.reload()
 })
 
 
