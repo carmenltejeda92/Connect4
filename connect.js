@@ -9,6 +9,7 @@ const main = document.querySelector('#gameBoard')
 const aside = document.querySelector('#playerTwo')
 const footer = document.querySelector('.bottomButtons')
 const endGame = document.querySelector('#endGame')
+const input = document.createElement('input')
 
 
 header.style.height = '50px'
@@ -27,6 +28,8 @@ section.style.border = '1px solid black'
 section.style.margin = '35px'
 section.style.textAlign = 'center'
 section.innerHTML = "Player 1"
+input.style.width = "75px"
+section.appendChild(input)
 
 
 main.style.height = '500px'
