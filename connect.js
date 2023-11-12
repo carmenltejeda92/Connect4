@@ -15,8 +15,14 @@ const br = document.createElement('br')
 const br2 = document.createElement('br')
 const submit = document.createElement('button')
 const submit2 = document.createElement('button')
-
-
+const boxes = document.createElement('div')
+let columns = 7
+let rows = 6
+let gameOver = true
+const player1 = document.createElement('div')
+let player2
+let p1
+let p2
 
 header.style.height = '50px'
 header.style.width = '150px'
@@ -25,7 +31,6 @@ header.style.border = '1px solid black'
 header.style.margin = 'auto'
 header.style.textAlign = 'center'
 header.style.alignContent = 'center'
-
 
 section.style.height = '150px'
 section.style.width = '150px'
@@ -49,8 +54,6 @@ main.style.textAlign = 'center'
 main.style.flexWrap = 'wrap'
 main.style.display = 'flex'
 
-
-
 aside.style.height = '150px'
 aside.style.width = '150px'
 aside.style.backgroundColor = 'white'
@@ -64,7 +67,6 @@ aside.appendChild(input2)
 submit2.innerText = 'Submit'
 aside.appendChild(submit2)
 
-
 footer.style.height = '50px'
 footer.style.width = '400px'
 footer.style.backgroundColor = 'white'
@@ -73,11 +75,12 @@ footer.style.margin = '35px'
 footer.style.textAlign = 'center'
 
 
-const redChip = document.createElement('div')
+let redChip = document.createElement('div')
 redChip.style.backgroundColor = 'red'
 redChip.style.borderRadius = '50%'
 redChip.style.height = '75px'
 redChip.style.width = '75px'
+redChip.classList.add('red')
 
 const yellowChip = document.createElement('div')
 yellowChip.style.backgroundColor = 'Yellow'
@@ -85,25 +88,25 @@ yellowChip.style.borderRadius = '50%'
 yellowChip.style.height = '75px'
 yellowChip.style.width = '75px'
 
-// // Event Listeners
-// poRed.addEventListener('click', () =>{
-//     chip.style.backgroundColor = 'Red'
-// })
 
-
-
-// main.addEventListener('click', (e) =>{
-//     if(e.target.className === 'boxes'){
-//         e.target.style.backgroundColor = chip.style.backgroundColor
-//     }
-// })
-
+// Event Listeners
 endGame.addEventListener('click', () =>{
     location.reload()
 })
 
-let columns = 7
-let rows = 6
+submit.addEventListener('click', () =>{
+    if(input1.value == 'Red') {
+        player1.classList.add('red')}
+    else if (input1.value == 'yellow') player1 = yellowChip
+    p1 == true && p2 == false
+    input1.value = ' '
+    console.log(player1)
+})
+
+submit2.addEventListener('click', () =>{
+    if(input2.value == 'Red') player2 = redChip
+    else if(input2.value == 'yellow') player2 == yellowChip
+})
 
 window.onload = function() {
     gameBoard = []
@@ -120,13 +123,38 @@ window.onload = function() {
             boxes.style.height = '82px'
             boxes.style.border = '1px solid black'
             boxes.className = 'boxes'
+            boxes.addEventListener('click', turn())
             main.appendChild(boxes)
         }
         gameBoard.push(rowArr)
     }
 }
+
+function turn(){
+    if(gameOver) return
+
+
+}
+
+
 /* citation: "How to Build Connect 4 with Javascript HTML CSS" YouTube, uploaded by Kenny Yip Coding, 06, Feb, 2022,
                https://www.youtube.com/watch?v=4ARsthVnCTg. */
+
+
+main.addEventListener('click', (e) =>{
+    if(e.target.className === 'boxes'){
+        e.target.style.backgroundColor = player1
+    }
+})
+
+
+
+
+
+
+
+
+
 
 
 
