@@ -45,7 +45,7 @@ section.appendChild(input1)
 submit.innerText = 'Submit'
 section.appendChild(submit)
 
-main.style.height = '500px'
+main.style.height = '550px'
 main.style.width = '698px'
 main.style.backgroundColor = 'blue'
 main.style.border = '3px solid black'
@@ -80,7 +80,7 @@ redChip.style.backgroundColor = 'red'
 redChip.style.borderRadius = '50%'
 redChip.style.height = '75px'
 redChip.style.width = '75px'
-redChip.className.add('red')
+redChip.classList.add('red')
 
 const yellowChip = document.createElement('div')
 yellowChip.style.backgroundColor = 'Yellow'
@@ -119,9 +119,12 @@ window.onload = function() {
             const boxes = document.createElement('div')
             boxes.id = i.toString() + "-" + t.toString()
             boxes.classList.add("boxes")
-            boxes.style.width = '98px'
-            boxes.style.height = '82px'
+            boxes.style.width = '90px'
+            boxes.style.height = '89px'
             boxes.style.border = '1px solid black'
+            boxes.style.backgroundColor = 'white'
+            boxes.style.margin = 'auto'
+            boxes.style.borderRadius = '50%'
             boxes.className = 'boxes'
             boxes.addEventListener('click', turn())
             main.append(boxes)
@@ -134,10 +137,8 @@ function turn(){
     if(gameOver) return
 
     let boxes = this
-    if(p1){
-        boxes.classList.add('.red')
-        // e.target.className === 'boxes'
-        // e.target.style.backgroundColor = 'red'
+    if(e.target.className === 'boxes'){
+        // e.target.style.backgroundColor = redChip.style.backgroundColor
     }
 }
 
