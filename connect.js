@@ -80,7 +80,7 @@ redChip.style.backgroundColor = 'red'
 redChip.style.borderRadius = '50%'
 redChip.style.height = '75px'
 redChip.style.width = '75px'
-redChip.classList.add('red')
+redChip.className.add('red')
 
 const yellowChip = document.createElement('div')
 yellowChip.style.backgroundColor = 'Yellow'
@@ -96,7 +96,7 @@ endGame.addEventListener('click', () =>{
 
 submit.addEventListener('click', () =>{
     if(input1.value == 'Red') {
-        player1.classList.add('red')}
+        player1.classList.add('.red')}
     else if (input1.value == 'yellow') player1 = yellowChip
     p1 == true && p2 == false
     input1.value = ' '
@@ -124,7 +124,7 @@ window.onload = function() {
             boxes.style.border = '1px solid black'
             boxes.className = 'boxes'
             boxes.addEventListener('click', turn())
-            main.appendChild(boxes)
+            main.append(boxes)
         }
         gameBoard.push(rowArr)
     }
@@ -133,7 +133,12 @@ window.onload = function() {
 function turn(){
     if(gameOver) return
 
-
+    let boxes = this
+    if(p1){
+        boxes.classList.add('.red')
+        // e.target.className === 'boxes'
+        // e.target.style.backgroundColor = 'red'
+    }
 }
 
 
@@ -141,11 +146,9 @@ function turn(){
                https://www.youtube.com/watch?v=4ARsthVnCTg. */
 
 
-main.addEventListener('click', (e) =>{
-    if(e.target.className === 'boxes'){
-        e.target.style.backgroundColor = player1
-    }
-})
+// main.addEventListener('click', (e) =>{
+   
+// })
 
 
 
