@@ -40,6 +40,7 @@ gameScreen.forEach(box=>{
     box.addEventListener('click', (e)=>{
         // box.appendChild(shape)
         let shape = document.createElement('div')
+
         if(box.getElementsByTagName('div').length){
             return
         }else{
@@ -71,7 +72,7 @@ let check =[]
 for(let i=0; i<5; i++){
         check.push([])
         for(let c=0; c<5; c++){
-            let elements = document.querySelectorAll('.box')
+            let elements = document.getElementsByClassName('.box')
             check[i].push(elements)
         }
     }
@@ -83,6 +84,7 @@ let score = 0
 for(let i=0; i<check.length; i++){
     if(currentShape === 'redChip'){
         redCounter++
+        console.log(redCounter)
     } else if(currentShape === 'yellowChip'){
         yellowCounter++
     }
@@ -101,12 +103,23 @@ gameScreen.forEach(box =>{
 })
 
 
-
-
 }
 
 //function checkWinner() - check which player, then check if this player has four shapes in a row or a column by checking it's class name 
 // and increase score in the same checkWinner() function - if the score === 2, then player wins the game 
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

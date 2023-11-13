@@ -1,16 +1,11 @@
 body{
     background-color:azure;
+    display: flex;
     justify-content: center;
 }
 
 #header{
-    height: 50px;
-    width: 150px;
-    background-color: white;
-    border: 1px solid black;
-    margin: 0 auto;
-    text-align: center;
-    align-self: center;
+   margin: 0auto;
 }
 
 #section{
@@ -26,11 +21,10 @@ body{
 .gameScreen{
     display: grid;
     grid-template-columns: repeat(5, 100px);
-    height: 700px;
-    width: 1000px;   
-    flex-wrap: wrap;
-    align-self: center;
-    
+    height: 500px;
+    width: 500px;   
+    background-color: blue;
+
 }
 
 
@@ -100,3 +94,6 @@ body{
 
 
 
+#img{
+    border-radius: 45%;
+}
