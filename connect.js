@@ -13,9 +13,7 @@ const input1 = document.createElement('input')
 const input2 = document.createElement('input')
 const br = document.createElement('br')
 const br2 = document.createElement('br')
-const submit = document.createElement('button')
-const submit2 = document.createElement('button')
-const boxes = document.createElement('div')
+// const boxes = document.createElement('div')
 let columns = 7
 let rows = 6
 let gameOver = true
@@ -46,22 +44,6 @@ aside.append(br2)
 aside.appendChild(input2)
 submit2.innerText = 'Submit'
 aside.appendChild(submit2)
-
-footer.style.height = '50px'
-footer.style.width = '400px'
-footer.style.backgroundColor = 'white'
-footer.style.border = '1px solid black'
-footer.style.margin = '35px'
-footer.style.textAlign = 'center'
-
-
-let redChip = document.createElement('div')
-redChip.setAttribute('class', 'red')
-
-const yellowChip = document.createElement('div')
-yellowChip.style.backgroundColor = 'Yellow'
-yellowChip.style.height = '75px'
-yellowChip.style.width = '75px'
 
 
 // Event Listeners

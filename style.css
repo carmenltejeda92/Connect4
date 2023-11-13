@@ -27,7 +27,7 @@ body{
     display: grid;
     grid-template-columns: repeat(5, 100px);
     height: 700px;
-    width: 1000px;
+    width: 1000px;    
 }
 
 
@@ -41,12 +41,16 @@ body{
 
 }
 
-
-.middle{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+.footer{
+    height: 50px;
+    width: 400 px;
+    background-color: white;
+    border: 1px solid black;
+    margin: 35px;
+    text-align: center;
 }
+
+
 
 #playerOne{
     flex-direction: column;
@@ -63,7 +67,7 @@ body{
 }
 
 
-.red{
+.redChip{
     background-color: red;
     height: 75px;
     width: 75px;
@@ -71,6 +75,12 @@ body{
 }
 
 
+.yellowChip{
+    background-color: yellow;
+    height: 75px;
+    width: 75px;
+    display: block;
+}
 
 .box{
     border: solid black 2px;
