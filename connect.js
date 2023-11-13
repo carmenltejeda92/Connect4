@@ -42,24 +42,37 @@ submit.addEventListener('click', () =>{
     console.log(player1)
 })
 
-let shape = document.createElement('div')
-
-const player1submit=()=>{
-    shape.setAttribute('class', 'redChip')
-    return shape
-} 
 
 const gameScreen = document.querySelectorAll('.box')
-
 console.log(gameScreen)
+
+let currentShape = 'redChip'
+let currentPlayer = p1
 
 gameScreen.forEach(box=>{
     box.addEventListener('click', (e)=>{
-        box.appendChild(shape)
+        // box.appendChild(shape)
+        let shape = document.createElement('div')
+        if(box.getElementsByTagName('div').length){
+            return
+        }else{
+            if(currentShape === 'redChip'){
+                shape.setAttribute('class', 'redChip')
+                box.appendChild(shape)
+                currentShape = 'yellowChip'
+                currentPlayer = p2
+            }else if(currentShape === 'yellowChip'){
+                shape.setAttribute('class', 'yellowChip')
+                box.appendChild(shape)
+                currentShape = 'redChip'
+                currentPlayer = p1
+            }
+
+            checkWinner()
+        }
+        
     })
 })
-
-
 
 
 
