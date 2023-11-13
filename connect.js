@@ -86,15 +86,19 @@ for(let i=0; i<check.length; i++){
     } else if(currentShape === 'yellowChip'){
         yellowCounter++
     }
-    if(redCounter ===4){
-        console.log("Red wins!")
-        score++
-    }else if(yellowCounter ===4){
-        console.log("Yellow wins!")
-        score++
-    }
-    if(score > 2)       console.log('You win the game!')
 }
+gameScreen.forEach(box =>{
+    box.addEventListener('click', (e)=>{
+        if(redCounter ===4){
+            console.log("Red wins!")
+            score++
+        }else if(yellowCounter ===4){
+            console.log("Yellow wins!")
+            score++
+        }
+        if(score > 2)       console.log('You win the game!')
+    })
+})
 
 
 
