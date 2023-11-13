@@ -18,14 +18,6 @@ let player2
 let p1
 let p2
 
-class Player{
-    
-}
-
-
-
-
-
 
 // Event Listeners
 newGame.addEventListener('click', () =>{
