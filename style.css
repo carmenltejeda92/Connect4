@@ -1,5 +1,44 @@
 body{
     background-color:azure;
+
+}
+
+#header{
+    height: 50px;
+    width: 150px;
+    background-color: white;
+    border: 1px solid black;
+    margin: auto;
+    text-align: center;
+    align-content: center;
+}
+
+#section{
+    height: 150px;
+    width: 150px;
+    background-color: white;
+    border: 1px solid black;
+    margin: 35px;
+    text-align: center;
+
+}
+
+.gameScreen{
+    display: grid;
+    grid-template-columns: repeat(5, 100px);
+    height: 700px;
+    width: 1000px;
+}
+
+
+#aside{
+    height: 150px;
+    width: 150px;
+    background-color: white;
+    border: 1px solid black;
+    margin: 35px;
+    text-align: center;
+
 }
 
 
@@ -24,9 +63,18 @@ body{
 }
 
 
+.red{
+    background-color: red;
+    height: 75px;
+    width: 75px;
+    display: block;
+}
 
 
 
+.box{
+    border: solid black 2px;
 
+}
 
 

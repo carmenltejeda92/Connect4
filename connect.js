@@ -2,8 +2,8 @@
     Date: 11/07/2023
     Purpose: Creating a connect 4 game for two players.  */
 
-const body = document.querySelector('#body')
-const header = document.querySelector('#connect')
+// const body = document.querySelector('#body')
+// const header = document.querySelector('#connect')
 const section = document.querySelector('#playerOne')
 const main = document.querySelector('#gameBoard')
 const aside = document.querySelector('#playerTwo')
@@ -24,20 +24,6 @@ let player2
 let p1
 let p2
 
-header.style.height = '50px'
-header.style.width = '150px'
-header.style.backgroundColor = 'white'
-header.style.border = '1px solid black'
-header.style.margin = 'auto'
-header.style.textAlign = 'center'
-header.style.alignContent = 'center'
-
-section.style.height = '150px'
-section.style.width = '150px'
-section.style.backgroundColor = 'white'
-section.style.border = '1px solid black'
-section.style.margin = '35px'
-section.style.textAlign = 'center'
 section.innerHTML = "Player 1"
 input1.style.width = "75px"
 section.append(br)
@@ -45,21 +31,15 @@ section.appendChild(input1)
 submit.innerText = 'Submit'
 section.appendChild(submit)
 
-main.style.height = '550px'
-main.style.width = '698px'
-main.style.backgroundColor = 'blue'
-main.style.border = '3px solid black'
-main.style.margin ='35px'
-main.style.textAlign = 'center'
-main.style.flexWrap = 'wrap'
-main.style.display = 'flex'
+// main.style.height = '550px'
+// main.style.width = '698px'
+// // main.style.backgroundColor = 'blue'
+// main.style.border = '3px solid black'
+// main.style.margin ='35px'
+// main.style.textAlign = 'center'
+// main.style.flexWrap = 'wrap'
+// main.style.display = 'flex'
 
-aside.style.height = '150px'
-aside.style.width = '150px'
-aside.style.backgroundColor = 'white'
-aside.style.border = '1px solid black'
-aside.style.margin = '35px'
-aside.style.textAlign = 'center'
 aside.innerHTML = "Player 2"
 input2.style.width = '75px'
 aside.append(br2)
@@ -76,15 +56,10 @@ footer.style.textAlign = 'center'
 
 
 let redChip = document.createElement('div')
-redChip.style.backgroundColor = 'red'
-redChip.style.borderRadius = '50%'
-redChip.style.height = '75px'
-redChip.style.width = '75px'
-redChip.classList.add('red')
+redChip.setAttribute('class', 'red')
 
 const yellowChip = document.createElement('div')
 yellowChip.style.backgroundColor = 'Yellow'
-yellowChip.style.borderRadius = '50%'
 yellowChip.style.height = '75px'
 yellowChip.style.width = '75px'
 
@@ -95,51 +70,48 @@ endGame.addEventListener('click', () =>{
 })
 
 submit.addEventListener('click', () =>{
-    if(input1.value == 'Red') {
-        player1.classList.add('.red')}
-    else if (input1.value == 'yellow') player1 = yellowChip
+    if(input1.value == 'red') player1.classList.add('.red') //redChip
+    // else if (input1.value == 'yellow') player1 = yellowChip
     p1 == true && p2 == false
     input1.value = ' '
     console.log(player1)
 })
 
-submit2.addEventListener('click', () =>{
-    if(input2.value == 'Red') player2 = redChip
-    else if(input2.value == 'yellow') player2 == yellowChip
-})
 
-window.onload = function() {
-    gameBoard = []
+// window.onload = function() {
+//     gameBoard = []
 
-    for(let i=0; i<rows; i++){
-        let rowArr = []
-        for(let t=0; t<columns; t++){
-            rowArr.push(' ')
+//     for(let i=0; i<rows; i++){
+//         let rowArr = []
+//         for(let t=0; t<columns; t++){
+//             rowArr.push(' ')
 
-            const boxes = document.createElement('div')
-            boxes.id = i.toString() + "-" + t.toString()
-            boxes.classList.add("boxes")
-            boxes.style.width = '90px'
-            boxes.style.height = '89px'
-            boxes.style.border = '1px solid black'
-            boxes.style.backgroundColor = 'white'
-            boxes.style.margin = 'auto'
-            boxes.style.borderRadius = '50%'
-            boxes.className = 'boxes'
-            boxes.addEventListener('click', turn())
-            main.append(boxes)
-        }
-        gameBoard.push(rowArr)
-    }
-}
+//             const boxes = document.createElement('div')
+//             boxes.id = i.toString() + "-" + t.toString()
+//             boxes.classList.add("boxes")
+//             boxes.style.width = '90px'
+//             boxes.style.height = '89px'
+//             boxes.style.border = '1px solid black'
+//             boxes.style.backgroundColor = 'white'
+//             boxes.style.margin = 'auto'
+//             boxes.style.borderRadius = '50%'
+//             boxes.className = 'boxes'
+//             boxes.addEventListener('click', turn())
+//             main.append(boxes)
+//         }
+//         gameBoard.push(rowArr)
+//     }
+// }
 
 function turn(){
     if(gameOver) return
 
     let boxes = this
-    if(e.target.className === 'boxes'){
-        // e.target.style.backgroundColor = redChip.style.backgroundColor
+    if(p1){
+        boxes.classList.add('red')
+        p2 = true
     }
+    
 }
 
 
@@ -147,16 +119,10 @@ function turn(){
                https://www.youtube.com/watch?v=4ARsthVnCTg. */
 
 
-// main.addEventListener('click', (e) =>{
-   
-// })
 
-
-
-
-
-
-
+boxes.addEventListener('click', (e) =>{
+    if(p1) boxes.classList.add('.red')
+})
 
 
 
