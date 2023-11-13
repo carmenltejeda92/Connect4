@@ -77,12 +77,20 @@ for(let i=0; i<5; i++){
     }
 
 
-let counter = 0
+let redCounter = 0
+let yellowCounter = 0
 let score = 0
 for(let i=0; i<check.length; i++){
-    if(currentShape === 'redChip') counter++
-    if(counter ===4){
-        console.log("You win the match!")
+    if(currentShape === 'redChip'){
+        redCounter++
+    } else if(currentShape === 'yellowChip'){
+        yellowCounter++
+    }
+    if(redCounter ===4){
+        console.log("Red wins!")
+        score++
+    }else if(yellowCounter ===4){
+        console.log("Yellow wins!")
         score++
     }
     if(score > 2)       console.log('You win the game!')
