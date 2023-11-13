@@ -4,14 +4,12 @@
 
 // const body = document.querySelector('#body')
 const section = document.querySelector('#playerOne')
-const main = document.querySelector('#gameBoard')
 const aside = document.querySelector('#playerTwo')
 const footer = document.querySelector('.bottomButtons')
 const endGame = document.querySelector('#endGame')
 const input1 = document.querySelector('#input1')
 const input2 = document.querySelector('#input2')
-const br = document.createElement('br')
-const br2 = document.createElement('br')
+
 
 let gameOver = true
 const player1 = document.createElement('div')
@@ -20,14 +18,12 @@ let p1
 let p2
 
 section.innerHTML = "Player 1"
-section.append(br)
 section.appendChild(input1)
 submit.innerText = 'Submit'
 section.appendChild(submit)
 
 aside.innerHTML = "Player 2"
 input2.style.width = '75px'
-aside.append(br2)
 aside.appendChild(input2)
 submit2.innerText = 'Submit'
 aside.appendChild(submit2)
@@ -39,34 +35,33 @@ endGame.addEventListener('click', () =>{
 })
 
 submit.addEventListener('click', () =>{
-    if(input1.value == 'red') player1.classList.add('.red') //redChip
+    if(input1.value == 'red') player1.classList.add('.redChip') //redChip
     // else if (input1.value == 'yellow') player1 = yellowChip
     p1 == true && p2 == false
     input1.value = ' '
     console.log(player1)
 })
 
+let shape = document.createElement('div')
 
-function turn(){
-    if(gameOver) return
+const player1submit=()=>{
+    shape.setAttribute('class', 'redChip')
+    return shape
+} 
 
-    let boxes = this
-    if(p1){
-        boxes.classList.add('red')
-        p2 = true
-    }
-    
-}
+const gameScreen = document.querySelectorAll('.box')
 
+console.log(gameScreen)
 
-/* citation: "How to Build Connect 4 with Javascript HTML CSS" YouTube, uploaded by Kenny Yip Coding, 06, Feb, 2022,
-               https://www.youtube.com/watch?v=4ARsthVnCTg. */
-
-
-
-boxes.addEventListener('click', (e) =>{
-    if(p1) boxes.classList.add('.red')
+gameScreen.forEach(box=>{
+    box.addEventListener('click', (e)=>{
+        box.appendChild(shape)
+    })
 })
+
+
+
+
 
 
 
