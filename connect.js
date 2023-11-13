@@ -75,7 +75,7 @@ gameScreen.forEach(box=>{
 })
 
 
-
+function checkWinner(){}
 
 
 
