@@ -84,23 +84,16 @@ for(let i=0; i<5; i++){
         }
     }
 
-for(let a=0; a<7; a++){
-    let counter = 1
-    let currentPosition = check[0][a]
-    for(let b=1; i<7; b++){
-        if(currentPosition === check[a][b]){
-            counter++
-            if(counter === 4){
-                let winMessage = document.querySelector('#connect')
-                winMessage.innerHTML = 'Player1 wins!'
-                counter = 1
-                break
-            }
-        }
-    }
+
+let counter
+for(let i=0; i<check.length; i++){
+    if(currentShape === 'redChip') counter++
+    if(counter ===4)    console.log("You win!")
 }
 
-    console.log(check)
+
+
+
 }
 
 //function checkWinner() - check which player, then check if this player has four shapes in a row or a column by checking it's class name 
