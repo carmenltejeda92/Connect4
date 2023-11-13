@@ -6,6 +6,7 @@
 const section = document.querySelector('#playerOne')
 const aside = document.querySelector('#playerTwo')
 const footer = document.querySelector('.bottomButtons')
+const newGame = document.querySelector('#newGame')
 const endGame = document.querySelector('#endGame')
 const input1 = document.querySelector('#input1')
 const input2 = document.querySelector('#input2')
@@ -17,31 +18,25 @@ let player2
 let p1
 let p2
 
-section.innerHTML = "Player 1"
-section.appendChild(input1)
-submit.innerText = 'Submit'
-section.appendChild(submit)
+class Player{
+    
+}
 
-aside.innerHTML = "Player 2"
-input2.style.width = '75px'
-aside.appendChild(input2)
-submit2.innerText = 'Submit'
-aside.appendChild(submit2)
+
+
+
 
 
 // Event Listeners
-endGame.addEventListener('click', () =>{
-    location.reload()
-})
-
-submit.addEventListener('click', () =>{
-    if(input1.value == 'red') player1.classList.add('.redChip') //redChip
-    // else if (input1.value == 'yellow') player1 = yellowChip
+newGame.addEventListener('click', () =>{
     p1 == true && p2 == false
     input1.value = ' '
     console.log(player1)
 })
 
+endGame.addEventListener('click', () =>{
+    location.reload()
+})
 
 const gameScreen = document.querySelectorAll('.box')
 console.log(gameScreen)
@@ -67,19 +62,46 @@ gameScreen.forEach(box=>{
                 currentShape = 'redChip'
                 currentPlayer = p1
             }
-
-            // checkWinner()
         }
         
+    checkWinner()
+
     })
+
+    
 })
 
-console.log(('.gameScreen.box').length)
 
 
-// function checkWinner(){
+function checkWinner(){
+let check =[]
 
-// }
+for(let i=0; i<5; i++){
+        check.push([])
+        for(let c=0; c<5; c++){
+            let elements = document.querySelectorAll('.box')
+            check[i].push(elements)
+        }
+    }
+
+for(let a=0; a<7; a++){
+    let counter = 1
+    let currentPosition = check[0][a]
+    for(let b=1; i<7; b++){
+        if(currentPosition === check[a][b]){
+            counter++
+            if(counter === 4){
+                let winMessage = document.querySelector('#connect')
+                winMessage.innerHTML = 'Player1 wins!'
+                counter = 1
+                break
+            }
+        }
+    }
+}
+
+    console.log(check)
+}
 
 //function checkWinner() - check which player, then check if this player has four shapes in a row or a column by checking it's class name 
 // and increase score in the same checkWinner() function - if the score === 2, then player wins the game 

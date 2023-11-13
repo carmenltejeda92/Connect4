@@ -8,10 +8,9 @@ body{
     width: 150px;
     background-color: white;
     border: 1px solid black;
-    margin: auto;
+    margin: 0 auto;
     text-align: center;
-    justify-content: center;
-    margin: 25px;
+    align-self: center;
 }
 
 #section{
@@ -30,6 +29,7 @@ body{
     height: 700px;
     width: 1000px;   
     flex-wrap: wrap;
+    align-self: center;
     
 }
 
@@ -68,13 +68,6 @@ body{
 #playerTwo{
     align-self: center;
 }
-
-
-.bottomButtons{
-    justify-content: center;
-    align-self: center;
-}
-
 
 .redChip{
     background-color: red;
