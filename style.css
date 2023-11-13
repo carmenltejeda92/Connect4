@@ -1,6 +1,6 @@
 body{
     background-color:azure;
-
+    justify-content: center;
 }
 
 #header{
@@ -10,7 +10,8 @@ body{
     border: 1px solid black;
     margin: auto;
     text-align: center;
-    align-content: center;
+    justify-content: center;
+    margin: 25px;
 }
 
 #section{
@@ -28,7 +29,8 @@ body{
     grid-template-columns: repeat(5, 100px);
     height: 700px;
     width: 1000px;   
-    flex-wrap: wrap
+    flex-wrap: wrap;
+    
 }
 
 
@@ -79,6 +81,7 @@ body{
     height: 75px;
     width: 75px;
     display: block;
+    border-radius: 50%;
 }
 
 
@@ -87,11 +90,11 @@ body{
     height: 75px;
     width: 75px;
     display: block;
+    border-radius: 50%;
 }
 
 .box{
     border: solid black 2px;
-
 }
 
 

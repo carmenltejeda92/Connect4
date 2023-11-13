@@ -68,15 +68,21 @@ gameScreen.forEach(box=>{
                 currentPlayer = p1
             }
 
-            checkWinner()
+            // checkWinner()
         }
         
     })
 })
 
+console.log(('.gameScreen.box').length)
 
-function checkWinner(){}
 
+// function checkWinner(){
+
+// }
+
+//function checkWinner() - check which player, then check if this player has four shapes in a row or a column by checking it's class name 
+// and increase score in the same checkWinner() function - if the score === 2, then player wins the game 
 
 
 
